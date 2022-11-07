@@ -154,7 +154,8 @@ New release '22.04.1 LTS' available.\
 Run 'do-release-upgrade' to upgrade to it.
 
 Last login: Mon Nov 7 18:46:45 2022 from 172.21.144.1
-segovelo@LAPTOP-T0H2E05J:~$
+
+<p style="color:green">segovelo@LAPTOP-T0H2E05J:~$</p>
 
 **You got connected to WSL from Windows command line**
 
