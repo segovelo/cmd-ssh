@@ -22,7 +22,7 @@ connect_kwargs = {
     "passphrase": pass_phrase  
     }
 
-conn = Connection("172.21.148.67", user="<YOUR_USER>", config=config)
+conn = Connection("<YOUR.IP.CHANGE.IT>", user="<YOUR_USER>", config=config)
 
 print("sys.arg[0]: ", sys.argv[0])
 name = sys.argv[1]
