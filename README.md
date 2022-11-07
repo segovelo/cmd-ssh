@@ -31,7 +31,7 @@ To open VS Code from WSL:Ubuntu-20.04 and land into /home/segovelo/.bashrc file
 
 Method 1:\
 1.1 Type wsl in "search" task bar to open Ubunto-20.04 terminal\
-1.2 In terminal type segovelo@LAPTOP-T0H2E05J:/mnt/c/windows/system32$ cd ~
+1.2 In terminal type segovelo@LAPTOP-T0H2E05J:/mnt/c/windows/system32$ cd ~\
 1.3 Type segovelo@LAPTOP-T0H2E05J:~$ code.\
 1.4 Visual Studio code will open and then click ".bashrc" or ".bash_aliases"
 
