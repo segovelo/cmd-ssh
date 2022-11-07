@@ -64,12 +64,6 @@ segovelo@LAPTOP-T0H2E05J:/mnt/c/<Your/Path/To/Folder/ChangeIt>$scriptrepo repo-t
 
 python script mkrepo.py to run scriptrepo.sh from windows command line.
 
-Include your local repo directory path inside your system environment variable PATH\
-Do not forget to modify mkrepo.bat file with your local repo directory path, that way\
-you will able to run\
-C:\users\segovelo\desktop>mkrepo <repo_name>\
-from any folder.
-
 Create a .env file with your ssh credentials\
 SSH_PASSPHRASE=<YOUR_SSH_PASSPHRASE>\
 SSH_PASSWORD=<YOUR_SSH_PASSWORD>
@@ -77,6 +71,24 @@ SSH_PASSWORD=<YOUR_SSH_PASSWORD>
 Dependecies:\
 pip install fabric\
 pip install python-dotenv
+
+Include your local directory path to mkrepo.bat and mkrepo.py files inside your system\
+environment variable PATH.
+
+# Changes to mkrepo.bat
+
+Do not forget to modify mkrepo.bat file, in line 4, with your local directory path to\
+mkrepo.py, that way you will able to run like below:\
+C:\users\segovelo\desktop>mkrepo <repo_name>\
+from any folder.
+
+# Changes to mkrepo.py
+
+If you like, you can commented out line 9 and uncommented line 10, so you do not\
+need to type in every time you run a test your ssh_password and inject it from\
+.env file instead.\
+Replace, in line 35 of mkrepo.py, "mnt/c/user/<YOUR_USER>/<Your/Path/To/Folder/ChangeIt>"\
+with your WSL user and directory path to scriptrepo.sh .
 
 # Initialize ssh server
 
@@ -99,7 +111,8 @@ eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST> mtu 1500\
 &nbsp;&nbsp;&nbsp;inet 172.21.148.67 netmask 255.255.240.0 broadcast 172.21.159.255
 
 Copy the IP address you get after "inet", in the example above would be\
-"172.21.148.67" and paste it in mkrepo.py file in line 25.
+"172.21.148.67" and paste it in mkrepo.py file in line 25, also replace\
+"<YOUR_USER>" by your WSL username.
 
 Go back to Windows command line a create a ssh key:\
 C:\Users\some_user\desktop>ssh-keygen -t rsa\
@@ -167,7 +180,7 @@ C:\Users\some_user\desktop>
 
 Go back to Windows command line.\
 You are now ready to execute mkrepo.bat from Windows command line which then\
-run mkrepo.py and this executebash /mnt/c/Users/<Your/Path/To/Folder/ChangeIt>/scriptrepo.sh\
+run mkrepo.py and this execute "bash /mnt/c/Users/<Your/Path/To/Folder/ChangeIt>/scriptrepo.sh"\
 C:\Users\some_user\desktop>mkrepo repo-name
 
 When you finish and before closing terminal stop ssh server\

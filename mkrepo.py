@@ -32,5 +32,5 @@ print("os.getcwd(): ", calling_from_dir)
 conn.run("pwd") 
 with conn.cd(calling_from_dir):
     conn.run("pwd")
-    conn.run(f"bash /mnt/c/Users/<YOUR_USER>/<Your/Path/To/Folder/ChangeIt>/scriptrepo.sh {name}")    
+    conn.run(f"bash /mnt/c/users/<YOUR_USER>/<Your/Path/To/Folder/ChangeIt>/scriptrepo.sh {name}")    
 
