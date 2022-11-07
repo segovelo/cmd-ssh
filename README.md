@@ -132,7 +132,7 @@ Copy the IP address you get after "inet", in the example above would be\
 "172.21.148.67" and go back to Windows command line.
 
 C:\Users\some_user\desktop>ssh <YOUR_USER>@172.21.148.67\
-Enter passphrase for key 'C:\Users\Sebastian/.ssh/id_rsa':\
+Enter passphrase for key 'C:\Users\some_user/.ssh/id_rsa':\
 Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.72-microsoft-standard-WSL2 x86_64)
 
 - Documentation: https://help.ubuntu.com\
